@@ -1,7 +1,32 @@
 {
-  "model": "opus",
-  "language": "日本語",
   "permissions": {
-    "defaultMode": "acceptEdits"
-  }
+    "allow": [
+      "WebFetch(domain:navitime.co.jp)"
+    ],
+    "defaultMode": "auto"
+  },
+  "model": "sonnet[1m]",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /Users/hashimototadashi/.claude/say-response.py",
+            "async": true
+          }
+        ]
+      }
+    ]
+  },
+  "disableAllHooks": true,
+  "statusLine": {
+    "type": "command",
+    "command": "sh /Users/hashimototadashi/.claude/statusline-command.sh"
+  },
+  "language": "日本語",
+  "effortLevel": "high",
+  "autoUpdatesChannel": "stable",
+  "skipDangerousModePermissionPrompt": true,
+  "voiceEnabled": true
 }
