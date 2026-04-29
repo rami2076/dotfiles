@@ -1,4 +1,7 @@
 {
   "model": "opus",
-  "language": "日本語"
+  "language": "日本語",
+  "permissions": {
+    "defaultMode": "acceptEdits"
+  }
 }
